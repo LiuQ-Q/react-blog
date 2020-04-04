@@ -2,10 +2,10 @@ import Head from 'next/head';
 import { Row, Col } from 'antd';
 import Header from '../components/Header';
 
-const Home = () => (
+const List = () => (
   <div className="container">
     <Head>
-      <title>Home</title>
+      <title>List</title>
     </Head>
     <Header />
 
@@ -17,7 +17,8 @@ const Home = () => (
         右侧
       </Col>
     </Row>
+
   </div>
 )
 
-export default Home;
+export default List;
