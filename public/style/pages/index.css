@@ -1,4 +1,4 @@
-pre{
+pre {
   display: block;
   background-color: #283646 !important;
   padding: .5rem !important;
@@ -8,7 +8,7 @@ pre{
   border-radius: .3rem;
 }
 
-pre >code{
+pre >code {
   border:0px !important;
   background-color: #283646 !important;
   color:#FFF;
@@ -26,7 +26,7 @@ code {
   margin: 0px 3px;
 }
 
-.list-introduce img{
+.list-introduce img {
   width:100% ;
   border-radius:5px;
   border:1px solid #f0f0f0;

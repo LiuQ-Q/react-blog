@@ -32,7 +32,7 @@ const Detailed = (article) => {
                   <a href="/">首页</a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                  <a href="/list">列表</a>
+                  <a href={"/list?id=" + article.typeId}>{article.typeName}</a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>内容</Breadcrumb.Item>
               </Breadcrumb>

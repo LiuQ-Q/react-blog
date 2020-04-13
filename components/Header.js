@@ -31,8 +31,8 @@ const Header = () => {
     <div className="header">
       <Row type="flex" justify="center">
         <Col xs={24} sm={24} md={10} lg={15} xl={12}>
-          <span className="header-logo">刘琦</span>
-          <span className="header-text">前端工程师</span>
+          <span className="header-logo">LiuQ-Q</span>
+          <span className="header-text">不思，故有惑；不求，故不得；不问，故不知。</span>
         </Col>
         <Col xs={0} sm={0} md={14} lg={8} xl={6}>
           <Menu mode="horizontal" onClick={handleClick}>

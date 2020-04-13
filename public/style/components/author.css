@@ -1,18 +1,30 @@
-.author-div{
+.author-div {
+  position: relative;
   text-align: center;
   padding: 1rem;
-
 }
-.author-div div{
+
+.author-div div {
   margin-bottom: 1rem;
 
 }
-.author-introduction{
+
+.author-introduction {
   font-size:.8rem;
   color: #999;
+  padding-top: .8rem;
 }
-.account{
+
+.account {
   background-color: #999;
   margin-left: .5rem;
   margin-right: .5rem;
+}
+
+.status-img {
+  width: 180px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
