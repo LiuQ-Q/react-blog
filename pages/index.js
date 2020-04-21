@@ -17,6 +17,14 @@ import api from '../config/apiUrl';
 const Home = (list) => {
   const [myList, setMyList] = useState(list.data);
 
+  function introduceBreak(introduce) {
+    if (introduce.length > 155) {
+      return introduce.slice(0, 150) + ' ...';
+    } else {
+      return introduce;
+    }
+  }
+
   return(
     <div>
       <Head>
@@ -25,7 +33,7 @@ const Home = (list) => {
       <Header />
 
       <Row className="comm-main" type="flex" justify="center">
-        <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={14}>
+        <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={12}>
           <div className="bread-div">
             <Breadcrumb>
               <Breadcrumb.Item>首页</Breadcrumb.Item>
@@ -37,20 +45,28 @@ const Home = (list) => {
             dataSource={myList}
             renderItem={item => (
               <List.Item>
-                <div className="list-title">
-                  <Link href={{pathname:'/detailed', query:{id:item.id}}}>
-                    <a>{item.title}</a>
-                  </Link>
+                <div className="list-box clearfix">
+                  <div className="list-title">
+                    <Link href={{pathname:'/detailed', query:{id:item.id}}}>
+                      <a>{item.title}</a>
+                    </Link>
+                  </div>
+                  <div className="list-icon">
+                    <div><CalendarOutlined />{item.addTime}</div>
+                    <div><FolderOutlined />{item.typeName}</div>
+                    <div><FireOutlined />{item.viewCount}</div>
+                  </div>
+                  <div className="list-image">
+                    <Link href={{pathname:'/detailed', query:{id:item.id}}}>
+                      <a>
+                        <img src={item.image} />
+                      </a>
+                    </Link>
+                  </div>
+                  <span className="list-introduce">
+                    {introduceBreak(item.introduce)}
+                  </span>
                 </div>
-                <div className="list-icon">
-                  <span><CalendarOutlined />{item.addTime}</span>
-                  <span><FolderOutlined />{item.typeName}</span>
-                  <span><FireOutlined />{item.viewCount}</span>
-                </div>
-                <div 
-                  className="list-introduce"
-                  dangerouslySetInnerHTML={{__html: MdResolve(item.introduce).md}}
-                ></div>
               </List.Item>
             )}
           />

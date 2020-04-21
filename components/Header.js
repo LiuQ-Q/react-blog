@@ -5,7 +5,7 @@ import Link from 'next/router';
 import api from '../config/apiUrl';
 
 import { Row, Col, Menu } from 'antd';
-import { HomeOutlined, SmileOutlined } from '@ant-design/icons';
+import { HomeOutlined, UnorderedListOutlined } from '@ant-design/icons';
 
 const Header = () => {
   const [navList, setNavList] = useState([]);
@@ -34,6 +34,8 @@ const Header = () => {
           <span className="header-logo">LiuQ-Q</span>
           <span className="header-text">不思，故有惑；不求，故不得；不问，故不知。</span>
         </Col>
+        {/* <Col xs={0} sm={0} md={14} lg={8} xl={6}>
+        </Col> */}
         <Col xs={0} sm={0} md={14} lg={8} xl={6}>
           <Menu mode="horizontal" onClick={handleClick}>
             <Menu.Item key="0">
@@ -44,7 +46,7 @@ const Header = () => {
               navList.map((nav) => {
                 return (
                   <Menu.Item key={nav.id}>
-                    <SmileOutlined />
+                    <UnorderedListOutlined />
                     { nav.name }
                   </Menu.Item>
                 )

@@ -25,12 +25,3 @@ code {
   color:#4f4f4f;
   margin: 0px 3px;
 }
-
-.list-introduce img {
-  width:100% ;
-  border-radius:5px;
-  border:1px solid #f0f0f0;
-  max-width:1000px !important;
-  display: block;
-  margin:8px auto ;
-}
