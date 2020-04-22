@@ -52,6 +52,7 @@ body {
   height: 123px;
   float: left;
   margin-right: 1.5rem;
+  border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
 }
