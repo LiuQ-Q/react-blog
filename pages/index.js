@@ -33,7 +33,7 @@ const Home = (list) => {
       <Header />
 
       <Row className="comm-main" type="flex" justify="center">
-        <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={12}>
+        <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={10}>
           <div className="bread-div">
             <Breadcrumb>
               <Breadcrumb.Item>首页</Breadcrumb.Item>

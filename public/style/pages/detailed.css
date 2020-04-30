@@ -81,6 +81,12 @@ iframe {
   border:1px solid #f3f3f3;
 }
 
+.detailed-content blockquote {
+  border-left:4px solid #cbcbcb ;
+  padding: 10px 10px 10px 30px; 
+  background-color: #f8f8f8;
+}
+
 .title-level3 {
   display: none !important;
 }
