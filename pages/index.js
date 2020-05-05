@@ -10,6 +10,7 @@ import Header from '../components/Header';
 import Author from '../components/Author';
 import Advert from '../components/Advert';
 import Footer from '../components/Footer';
+import Hot from '../components/Hot';
 import MdResolve from '../components/MdResolve';
 
 import api from '../config/apiUrl';
@@ -28,7 +29,7 @@ const Home = (list) => {
   return(
     <div>
       <Head>
-        <title>Home</title>
+        <title>LiuQ-Q个人博客</title>
       </Head>
       <Header />
 
@@ -73,6 +74,7 @@ const Home = (list) => {
         </Col>
         <Col className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
           <Author />
+          <Hot />
           <Advert />
         </Col>
       </Row>

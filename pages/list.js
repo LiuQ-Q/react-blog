@@ -32,7 +32,7 @@ const MyList = (list) => {
   return(
     <div>
       <Head>
-        <title>List</title>
+        <title>LiuQ-Q个人博客</title>
       </Head>
       <Header />
 
@@ -59,7 +59,7 @@ const MyList = (list) => {
                   <div className="list-icon">
                     <div><CalendarOutlined />{item.addTime}</div>
                     <div><FolderOutlined />{item.typeName}</div>
-                    <div><FireOutlined />{item.viewCount}人</div>
+                    <div><FireOutlined />{item.viewCount}</div>
                   </div>
                   <div className="list-image">
                     <Link href={{pathname:'/detailed', query:{id:item.id}}}>

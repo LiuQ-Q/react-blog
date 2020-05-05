@@ -19,7 +19,7 @@ const Detailed = (article) => {
   return (
     <div>
       <Head>
-        <title>{ article.title }</title>
+        <title>{ article.title }-LiuQ-Q个人博客</title>
       </Head>
       <Header />
   

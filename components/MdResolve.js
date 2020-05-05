@@ -8,7 +8,7 @@ const MdResolve = (md) => {
 
   renderer.heading = function(text, level, raw) {
     const anchor = tocify.add(text, level);
-    return `<a id="${anchor}" href="${anchor}" class="anchor-fix"><h${level}>${text}</h${level}></a>\n`
+    return `<a id="${anchor}" href="#${anchor}" class="anchor-fix"><h${level}>${text}</h${level}></a>\n`
   }
 
   marked.setOptions({

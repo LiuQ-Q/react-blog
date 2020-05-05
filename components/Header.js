@@ -5,7 +5,7 @@ import Link from 'next/router';
 import api from '../config/apiUrl';
 
 import { Row, Col, Menu } from 'antd';
-import { HomeOutlined, UnorderedListOutlined } from '@ant-design/icons';
+import { HomeOutlined, UnorderedListOutlined, UserOutlined } from '@ant-design/icons';
 
 const Header = () => {
   const [navList, setNavList] = useState([]);
@@ -22,6 +22,8 @@ const Header = () => {
   const handleClick = (e) => {
     if (e.key == 0) {
       Router.push('/');
+    } else if (e.key === "about") {
+      window.open("http://123.56.40.114:8000");
     } else {
       Router.push('/list?id=' + e.key);
     }
@@ -52,6 +54,10 @@ const Header = () => {
                 )
               })
             }
+            <Menu.Item key="about">
+              <UserOutlined />
+              关于我
+            </Menu.Item>
           </Menu>
         </Col>
       </Row>
