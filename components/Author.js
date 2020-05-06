@@ -28,20 +28,20 @@ const Author = () => {
           >
             <Avatar
               size={28}
-              className="account"
+              className="account account-github"
               icon={<GithubOutlined />}
             />
           </a>
           <Avatar
             size={28}
-            className="account"
+            className="account account-qq"
             icon={<QqOutlined />}
             onMouseEnter={()=>{changeQqStatus('block')}}
             onMouseLeave={()=>{changeQqStatus('none')}}
           />
           <Avatar
             size={28}
-            className="account"
+            className="account account-wechat"
             icon={<WechatOutlined />}
             onMouseEnter={()=>{changeWeChatStatus('block')}}
             onMouseLeave={()=>{changeWeChatStatus('none')}}

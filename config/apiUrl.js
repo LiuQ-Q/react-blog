@@ -14,7 +14,8 @@ const serverPath = {
     return await axios.get( ipUrl + 'getTypeInfo/').then(
       (res) => res.data.data
     )
-  }, 
+  },
+
   getArticleList: async () => {
     return await axios.get( ipUrl + 'getArticleList/').then(
       (res) => {
@@ -22,7 +23,8 @@ const serverPath = {
         return res.data;
       }
     )
-  }, 
+  },
+
   getArticleListByTypeId: async (typeId) => {
     return await axios.get( ipUrl + 'getArticleListByTypeId/' + typeId).then(
       (res) => {
@@ -30,12 +32,22 @@ const serverPath = {
         return res.data;
       }
     )
-  }, 
+  },
+
   getArticleById: async (articleId) => {
     return await axios.get( ipUrl + 'getArticleById/' + articleId).then(
       (res) => res.data.data[0]
     )
-  }, 
+  },
+
+  updateArticle: async (article) => {
+    return await axios({
+      method: 'post',
+      url: ipUrl + 'updateArticle/',
+      data: article,
+      withCredentials: true
+    }).then((res) => res.data)
+  },
 };
 
 export default serverPath;

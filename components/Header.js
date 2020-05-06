@@ -32,14 +32,20 @@ const Header = () => {
   return (
     <div className="header">
       <Row type="flex" justify="center">
-        <Col xs={24} sm={24} md={10} lg={15} xl={12}>
-          <span className="header-logo">LiuQ-Q</span>
+        <Col xs={24} sm={24} md={10} lg={15} xl={10}>
+          <span className="header-logo">
+            <a href="http://123.56.40.114:8000" target="_blank">LiuQ-Q</a>
+          </span>
           <span className="header-text">不思，故有惑；不求，故不得；不问，故不知。</span>
         </Col>
         {/* <Col xs={0} sm={0} md={14} lg={8} xl={6}>
         </Col> */}
-        <Col xs={0} sm={0} md={14} lg={8} xl={6}>
+        <Col xs={0} sm={0} md={14} lg={8} xl={5}>
           <Menu mode="horizontal" onClick={handleClick}>
+            <Menu.Item key="about">
+              <UserOutlined />
+              简历
+            </Menu.Item>
             <Menu.Item key="0">
               <HomeOutlined />
               首页
@@ -54,10 +60,6 @@ const Header = () => {
                 )
               })
             }
-            <Menu.Item key="about">
-              <UserOutlined />
-              关于我
-            </Menu.Item>
           </Menu>
         </Col>
       </Row>

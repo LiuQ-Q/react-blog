@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { Row, Col, Breadcrumb } from 'antd';
 import { CalendarOutlined, FolderOutlined, FireOutlined } from '@ant-design/icons';
@@ -15,6 +16,21 @@ import api from '../config/apiUrl';
 
 const Detailed = (article) => {
   const { md, tocify } = MdResolve(article.articleContent);
+
+  useEffect(() => {
+    let articleInfo = {
+      id: article.id,
+      view_count: article.viewCount + 1
+    }
+    
+    api.updateArticle(articleInfo).then((res) => {
+      if (res.isSuccess) {
+        // console.log('修改成功');
+      } else {
+        // console.log('修改失败');
+      }
+    })
+  }, [])
 
   return (
     <div>
@@ -44,7 +60,7 @@ const Detailed = (article) => {
               <div className="list-icon center">
                 <span><CalendarOutlined />{article.addTime}</span>
                 <span><FolderOutlined />{article.typeName}</span>
-                <span><FireOutlined />{article.viewCount}人</span>
+                <span><FireOutlined />{article.viewCount + 1}</span>
               </div>
               <div
                 className="detailed-content"

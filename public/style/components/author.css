@@ -21,6 +21,18 @@
   margin-right: .5rem;
 }
 
+.account-github:hover {
+  background-color: #24292E;
+}
+
+.account-qq:hover {
+  background-color: #12B7F5;
+}
+
+.account-wechat:hover {
+  background-color: #83D943;
+}
+
 .status-img {
   width: 180px;
   position: absolute;
