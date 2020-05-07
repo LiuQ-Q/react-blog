@@ -23,7 +23,7 @@ const Header = () => {
     if (e.key == 0) {
       Router.push('/');
     } else if (e.key === "about") {
-      window.open("http://123.56.40.114:8000");
+      window.open("http://resume.liu7.xyz");
     } else {
       Router.push('/list?id=' + e.key);
     }
@@ -34,7 +34,7 @@ const Header = () => {
       <Row type="flex" justify="center">
         <Col xs={24} sm={24} md={10} lg={15} xl={10}>
           <span className="header-logo">
-            <a href="http://123.56.40.114:8000" target="_blank">LiuQ-Q</a>
+            <a href="http://resume.liu7.xyz" target="_blank">LiuQ-Q</a>
           </span>
           <span className="header-text">不思，故有惑；不求，故不得；不问，故不知。</span>
         </Col>
