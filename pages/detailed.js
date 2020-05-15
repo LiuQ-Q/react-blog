@@ -4,6 +4,7 @@ import { Row, Col, Breadcrumb } from 'antd';
 import { CalendarOutlined, FolderOutlined, FireOutlined } from '@ant-design/icons';
 
 import '../public/style/pages/detailed.css';
+import '../public/style/pages/markdown.css';
 import 'highlight.js/styles/monokai-sublime.css';
 
 import Header from '../components/Header';
@@ -58,12 +59,12 @@ const Detailed = (article) => {
                 { article.title }
               </div>
               <div className="list-icon center">
-                <span><CalendarOutlined />{article.addTime}</span>
-                <span><FolderOutlined />{article.typeName}</span>
-                <span><FireOutlined />{article.viewCount + 1}</span>
+                <div><CalendarOutlined />{article.addTime}</div>
+                <div><FolderOutlined />{article.typeName}</div>
+                <div><FireOutlined />{article.viewCount + 1}</div>
               </div>
               <div
-                className="detailed-content"
+                className="detailed-content markdown-body"
                 dangerouslySetInnerHTML={{__html: md}}
               ></div>
             </div>

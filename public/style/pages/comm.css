@@ -39,6 +39,16 @@ body {
   padding-right: 20px;
 }
 
+.list-icon div:nth-child(1) span {
+  color: lightseagreen;
+}
+.list-icon div:nth-child(2) span {
+  color: orange;
+}
+.list-icon div:nth-child(3) span {
+  color: red;
+}
+
 .list-icon span {
   padding-right: 10px;
 }
