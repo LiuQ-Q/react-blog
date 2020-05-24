@@ -3,8 +3,8 @@ import '../public/style/components/footer.css';
 const Footer = () => {
   return (
     <div className="footer-div">
-      <div>系统由 React + Node + Ant Design</div>
-      <div>版权版权版权</div>
+      <div>Copyright © { new Date().getFullYear() } [liu7.xyz] All Rights Reserved.</div>
+      <div>备案号：津ICP备20003045号-1</div>
     </div>
   )
 }
