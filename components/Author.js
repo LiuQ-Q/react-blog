@@ -20,7 +20,7 @@ const Author = () => {
       <div>
         <Avatar size={100} src='../static/avatar.jpg' />
         <div className="author-introduction">
-          此博客前端使用 Next + Antd Design 构建, 目前还未全部完成, 仍在优化中, 项目后端使用 egg + mysql 构建, 项目目前运行在腾讯云, 使用 Nginx + pm2, 如对博客感兴趣, 可进入下方 github 拉取
+          此博客前端使用 Next + Antd Design 构建, 目前正在使用 Nuxt + TypeScript 重构, 项目后端使用 egg + mysql 构建, 项目运行在腾讯云服务器, 使用 Nginx 构建服务器, 如对博客感兴趣, 可进入下方 github 拉取
           <Divider>社交账号</Divider>
           <a
             href="https://github.com/LiuQ-Q"
